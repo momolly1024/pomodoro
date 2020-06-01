@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["notfound"],{9703:function(e,n,t){"use strict";t.r(n);var r=function(){var e=this,n=e.$createElement;e._self._c;return e._m(0)},u=[function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",{attrs:{id:"err"}},[t("h1",[e._v("404 ERROR")]),t("p",[e._v("杯具了，您查看的頁面已走丟。")])])}],c=t("2877"),l={},s=Object(c["a"])(l,r,u,!1,null,null,null);n["default"]=s.exports}}]);
+//# sourceMappingURL=notfound.66f71022.js.map
