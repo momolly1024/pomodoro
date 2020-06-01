@@ -1,15 +1,16 @@
 <template>
   <div id="list">
-    <h2>待辦清單</h2>
+    <h2>To Do List</h2>
     <div class="input">
       <b-form-input v-model="newtodo" @keydown.enter="addTodo" placeholder="Add a new mission!" maxlength="20"></b-form-input>
       <b-btn variant="success" @click="addTodo" class="d-inline-block">新增</b-btn>
     </div>
+<div class="b-table-simple">
     <b-table-simple >
       <b-thead>
         <b-tr>
-          <b-th>事項</b-th>
-          <b-th>動作</b-th>
+          <b-th>To do</b-th>
+          <b-th>Edit</b-th>
         </b-tr>
       </b-thead>
       <draggable v-model="todos" tag="tbody" v-bind="dragOption">
@@ -18,7 +19,7 @@
         </b-tr>
         <b-tr v-else v-for="(todo, index) in todos" :key="index">
           <b-td>
-            <b-form-input v-model="todo.model" v-if="todo.edit" maxlength="20"></b-form-input>
+            <b-form-input v-model="todo.model" v-if="todo.edit" maxlength="20" ></b-form-input>
             <b-btn variant="link" class="text-danger" v-if="todo.edit" @click="cancelTodo(index)">
               <font-awesome-icon :icon="['fas', 'undo']"></font-awesome-icon>
             </b-btn>
@@ -38,6 +39,7 @@
         </b-tr>
       </draggable>
     </b-table-simple>
+  </div>
   </div>
 </template>
 

@@ -37,10 +37,6 @@ export default new Vuex.Store({
     },
     historys (state) {
       return state.historys
-    },
-    nextTodo (state) {
-      if (state.todos.length > 0) state.next = state.todos[0].name
-      else state.next = '沒有下一筆'
     }
   },
   mutations: {

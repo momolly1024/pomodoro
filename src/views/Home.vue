@@ -5,11 +5,14 @@
     <h4 style="display:inline;">番茄鐘 Pomodoro</h4></div>
 
     <div id="animate">
-      <img src="../svg/break.svg" v-if="status != 1">
-      <img src="../svg/working.svg" v-if="status == 1">
+      <img src="../svg/break.svg" v-if="status != 1" style="width:170px ;height:170px text-align: justify;">
+      <img src="../svg/working.svg" v-if="status == 1" style="width:170px ;height:170px text-align: justify;">
     </div>
     <h4>{{ currentText }}</h4>
-      <h2>{{ timetext }}</h2>
+    <div class="earth">
+    <img src="../svg/time.svg" style="width:50px ;height:50px text-align: justify;">
+    <h2 style="display:inline;">{{ timetext }}</h2>
+    </div>
 
     <b-btn variant="primary" v-if="status != 1" @click="start" class="btn">
       <font-awesome-icon :icon="['fas', 'play']"></font-awesome-icon>
@@ -20,8 +23,6 @@
     <b-btn variant="warning" v-if="current.length > 0 || todos.length  > 0" @click="finish(true)" class="btn">
       <font-awesome-icon :icon="['fas', 'step-forward']"></font-awesome-icon>
     </b-btn>
-
-    <h3 >NEXT : {{ next }}</h3>
     <div class="time" >
       <button size="sm" id="btn1" @click="timenow" v-if="timeshow==false">顯示時間</button>
       <button size="sm" id="btn2" @click="timehide"  v-if="timeshow==true">隱藏時間</button>
@@ -78,9 +79,6 @@ export default {
     },
     todos () {
       return this.$store.getters.todos
-    },
-    next () {
-      return this.$store.getters.next
     }
   },
   methods: {
@@ -148,9 +146,6 @@ export default {
       this.timeshow = false
       this.nowdate = ''
       this.time = this.hidetime
-    },
-    nextTodo () {
-      this.$store.commit('nextTodo')
     }
   }
 }
