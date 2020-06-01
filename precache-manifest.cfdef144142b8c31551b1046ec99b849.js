@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "alarms/alarm4.mp3"
   },
   {
-    "revision": "c69933ae383154160da4",
-    "url": "css/app.1af872c0.css"
+    "revision": "eaaac9011cec7e2636b6",
+    "url": "css/app.a6bb9918.css"
   },
   {
     "revision": "6d6d0138f0f73026a797",
@@ -420,16 +420,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/break.f0169018.svg"
   },
   {
+    "revision": "e16a4c52f2c98fddd87edc12bd5bfc9f",
+    "url": "img/time.e16a4c52.svg"
+  },
+  {
+    "revision": "a267f01c72626794e5a15e721ae75105",
+    "url": "img/tomato.a267f01c.svg"
+  },
+  {
     "revision": "86e701d2f6c122794ed0dc0bc9f0579d",
     "url": "img/working.86e701d2.svg"
   },
   {
-    "revision": "4119ca9cac079cf19c895be16747e018",
+    "revision": "e22e51c2e0d06af32304d218e003343f",
     "url": "index.html"
   },
   {
-    "revision": "c69933ae383154160da4",
-    "url": "js/app.195aa2db.js"
+    "revision": "eaaac9011cec7e2636b6",
+    "url": "js/app.ba5715ba.js"
   },
   {
     "revision": "6d6d0138f0f73026a797",
@@ -448,8 +456,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/notfound.66f71022.js"
   },
   {
-    "revision": "5405afb57b790458b034",
-    "url": "js/settings.c4368d03.js"
+    "revision": "74d751f3f953c30d6e74",
+    "url": "js/settings.fcc55736.js"
   },
   {
     "revision": "97012d524ae0b7e07799ed3664171347",
