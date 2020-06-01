@@ -5,8 +5,11 @@
       <img src="../svg/break.svg" v-if="status != 1">
       <img src="../svg/working.svg" v-if="status == 1">
     </div>
-    <h2>{{ currentText }}</h2>
-    <h2>{{ timetext }}</h2>
+    <h4>{{ currentText }}</h4>
+    <div class="timetext">
+      <h2>{{ timetext }}</h2>
+    </div>
+
     <b-btn variant="primary" v-if="status != 1" @click="start" class="btn">
       <font-awesome-icon :icon="['fas', 'play']"></font-awesome-icon>
     </b-btn>
@@ -16,12 +19,12 @@
     <b-btn variant="warning" v-if="current.length > 0 || todos.length  > 0" @click="finish(true)" class="btn">
       <font-awesome-icon :icon="['fas', 'step-forward']"></font-awesome-icon>
     </b-btn>
-    <div class="time fixed-left" >
-      <button  id="btn1" @click="timenow" v-if="timeshow==false">顯示時間</button>
-      <button  id="btn2" @click="timehide"  v-if="timeshow==true">隱藏時間</button>
+    <div class="time" >
+      <button size="sm" id="btn1" @click="timenow" v-if="timeshow==false">顯示時間</button>
+      <button size="sm" id="btn2" @click="timehide"  v-if="timeshow==true">隱藏時間</button>
       <br>
-      <h1 id="now" v-if="timeshow==true">{{ nowdate }}</h1>
-      <h1 v-if="timeshow==true">{{time}}</h1>
+      <h5 id="now" v-if="timeshow==true">{{ nowdate }}</h5>
+      <h5 v-if="timeshow==true">{{time}}</h5>
       </div>
   </div>
 </template>
@@ -45,7 +48,7 @@ export default {
   },
   computed: {
     currentText () {
-      return this.current.length > 0 ? this.current : this.todos.length > 0 ? '點擊開始' : '沒有事項'
+      return this.current.length > 0 ? this.current : this.todos.length > 0 ? '' : '快去新增待辦事項'
       //  if(this.current.length > 0){
       //    return this.current
       // }
