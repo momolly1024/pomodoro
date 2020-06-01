@@ -2,7 +2,8 @@
   <div id="home">
     <h4>番茄鐘 Pomodoro</h4>
     <div id="animate">
-      <vue-loaders name="pacman" color="darkorange" scale="1"></vue-loaders>
+      <img src="../svg/break.svg" v-if="status != 1">
+      <img src="../svg/working.svg" v-if="status == 1">
     </div>
     <h2>{{ currentText }}</h2>
     <h2>{{ timetext }}</h2>
