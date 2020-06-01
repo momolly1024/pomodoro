@@ -5,6 +5,7 @@
       <img src="../svg/break.svg" v-if="status != 1" style="width:180px;height:180px">
       <img src="../svg/working.svg" v-if="status == 1" style="width:180px;height:180px">
     </div>
+
     <h4>{{ currentText }}</h4>
     <div class="timetext">
       <h2> <img src="../svg/time.svg" style="width:70px;height:70px"> {{ timetext }}</h2>
