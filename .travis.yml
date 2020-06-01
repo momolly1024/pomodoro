@@ -1,0 +1,23 @@
+# 語言
+language: node_js
+# 版本
+node_js:
+  - "11"
+# 執行指令
+script:
+  - npm run build
+# 部署設定
+deploy:
+  # Github Pages
+  provider: pages
+  # 不清除編譯後的檔案
+  skip_cleanup: true
+  # GITHUB TOKEN
+  github_token: $GITHUB_TOKEN
+  # 保留 commit 紀錄而不是 force push
+  keep_history: true
+  # 要上傳的資料夾
+  local_dir: dist
+  # 當 master 分支有變更時
+  on:
+    branch: master
