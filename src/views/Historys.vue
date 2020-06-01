@@ -1,9 +1,9 @@
 <template>
     <div id="history">
-            <b-table-simple  hover class="mt-5 w-75 mx-auto">
+            <b-table-simple  hover class="mt-1 w-75 mx-auto">
             <b-thead>
                 <b-tr>
-                <b-th>歷史紀錄</b-th>
+                <b-th style="font-size: 1.5rem;">歷史紀錄</b-th>
                 </b-tr>
             </b-thead>
             <b-tbody v-for = "(history, index) in historys" :key="index">
