@@ -1,22 +1,22 @@
 <template>
   <div id="home">
-    <h4>番茄鐘 Pomodoro</h4>
+    <h4> <img src="../svg/tomato.svg" style="width:40px;height:40px"> 番茄鐘 Pomodoro</h4>
     <div id="animate">
-      <img src="../svg/break.svg" v-if="status != 1">
-      <img src="../svg/working.svg" v-if="status == 1">
+      <img src="../svg/break.svg" v-if="status != 1" style="width:180px;height:180px">
+      <img src="../svg/working.svg" v-if="status == 1" style="width:180px;height:180px">
     </div>
     <h4>{{ currentText }}</h4>
     <div class="timetext">
-      <h2>{{ timetext }}</h2>
+      <h2> <img src="../svg/time.svg" style="width:70px;height:70px"> {{ timetext }}</h2>
     </div>
 
-    <b-btn variant="primary" v-if="status != 1" @click="start" class="btn">
+    <b-btn variant="outline-info" v-if="status != 1" @click="start" class="btn" >
       <font-awesome-icon :icon="['fas', 'play']"></font-awesome-icon>
     </b-btn>
-    <b-btn variant="danger" v-if="status == 1" @click="pause" class="btn">
+    <b-btn variant="outline-danger" v-if="status == 1" @click="pause" class="btn">
       <font-awesome-icon :icon="['fas', 'pause']"></font-awesome-icon>
     </b-btn>
-    <b-btn variant="warning" v-if="current.length > 0 || todos.length  > 0" @click="finish(true)" class="btn">
+    <b-btn variant="outline-warning" v-if="current.length > 0 || todos.length  > 0" @click="finish(true)" class="btn">
       <font-awesome-icon :icon="['fas', 'step-forward']"></font-awesome-icon>
     </b-btn>
     <div class="time" >

@@ -27,11 +27,11 @@ export default {
         }, {
           name: 'Cheer Up',
           file: 'alarm4.mp3'
-        },
-        {
-          name: '無聲勝有聲',
-          file: 'none'
         }
+        // {
+        //   name: '無聲勝有聲',
+        //   file: 'none'
+        // }
       ],
       fields: [
         {
