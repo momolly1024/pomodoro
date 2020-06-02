@@ -15,7 +15,7 @@
       <font-awesome-icon size="lg" :icon="['fas','bell']"></font-awesome-icon>
     </b-btn>
     <b-btn v-if="sound" variant="link" @click="Nomuted" class="text-danger mt-3">
-      <font-awesome-icon size="lg" :icon="['fa','bell-slash']"></font-awesome-icon>
+      <font-awesome-icon size="lg" :icon="['fas','bell-slash']"></font-awesome-icon>
     </b-btn>
 
     <b-btn variant="outline-info" v-if="status != 1" @click="start" class="btn" >
@@ -39,7 +39,7 @@
 
 <script>
 import Swal from 'sweetalert2'
-
+const audio = new Audio()
 export default {
   data () {
     return {
@@ -150,6 +150,14 @@ export default {
       this.timeshow = false
       this.nowdate = ''
       this.time = this.hidetime
+    },
+    muted () {
+      audio.muted = true
+      this.sound = true
+    },
+    Nomuted () {
+      audio.muted = false
+      this.sound = false
     }
 
   }
