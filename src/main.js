@@ -14,23 +14,26 @@ import VueLoaders from 'vue-loaders'
 // 必要引用
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faCheck, faPen, faTimes, faUndo, faSave, faPlay, faPause, faStepForward, faTrashAlt, faCog, faListUl, faClock, faHistory } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faPen, faTimes, faUndo, faSave, faPlay, faPause, faStepForward, faTrashAlt, faCog, faListUl, faClock, faHistory, faBellSlash } from '@fortawesome/free-solid-svg-icons'
 
 import draggable from 'vuedraggable'
 import VuePageTransition from 'vue-page-transition'
 import VueAudio from 'vue-audio-better'
-import VueAnalytics from 'vue-analytics'
+import VueGtag from 'vue-gtag'
+
+Vue.use(VueGtag, {
+  config: { id: 'UA-168244762-1' }
+})
+
 Vue.use(VueLoaders)
 
 Vue.use(VueAudio)
 Vue.use(VuePageTransition)
-library.add(faCheck, faPen, faTimes, faUndo, faSave, faPlay, faPause, faStepForward, faTrashAlt, faCog, faListUl, faClock, faHistory)
+library.add(faCheck, faPen, faTimes, faUndo, faSave, faPlay, faPause, faStepForward, faTrashAlt, faCog, faListUl, faClock, faHistory, faBellSlash)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.component('draggable', draggable)
-Vue.use(VueAnalytics, {
-  id: 'UA-168244762-1'
-})
+
 Vue.config.productionTip = false
 const template = `
 <div>

@@ -21,6 +21,7 @@
     "vue": "^2.6.11",
     "vue-analytics": "^5.22.1",
     "vue-audio-better": "^2.0.0",
+    "vue-gtag": "^1.6.2",
     "vue-loaders": "^4.0.0-alpha.2",
     "vue-page-transition": "^0.2.2",
     "vue-pwa-asset-generator": "^1.0.0",

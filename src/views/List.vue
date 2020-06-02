@@ -21,10 +21,10 @@
         <b-tr v-else v-for="(todo, index) in todos" :key="index">
           <b-td>
             <b-form-input v-model="todo.model" v-if="todo.edit" maxlength="20" ></b-form-input>
-            <b-btn variant="link" class="text-danger" v-if="todo.edit" @click="cancelTodo(index)">
+            <b-btn variant="link" class="text-danger" v-if="todo.edit" @click="cancelTodo(index)" @blur="cancelTodo(index)">
               <font-awesome-icon :icon="['fas', 'undo']"></font-awesome-icon>
             </b-btn>
-            <b-btn variant="link" class="text-success" v-if="todo.edit" @click="saveTodo(index)">
+            <b-btn variant="link" class="text-success" v-if="todo.edit" @click="saveTodo(index)" @blur="saveTodo(index)">
               <font-awesome-icon :icon="['fas', 'save']"></font-awesome-icon>
             </b-btn>
             <span v-else>{{ todo.name }}</span>

@@ -11,8 +11,8 @@
         <font-awesome-icon v-if="data.item.file == alarm" :icon="['fas', 'check']"></font-awesome-icon>
       </template>
     </b-table></b-tab>
-    <b-tab title="開發中"><p>coming soon...</p></b-tab>
-    <b-tab title="其他" ><p>coming soon...</p></b-tab>
+    <b-tab title="個人化"><p>coming soon...</p></b-tab>
+    <b-tab title="其他設定" ><p>coming soon...</p></b-tab>
   </b-tabs>
 </div>
 

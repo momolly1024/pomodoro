@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <h3 class="mt-1"> <img src="../svg/tomato.svg" style="width:50px;height:45px"> 番茄鐘 Pomodoro</h3>
+    <h3 class="mt-1"> <img src="../svg/tomato.svg" style="width:50px;height:45px; filter:drop-shadow(1px 1px 3px black)"> 番茄鐘 Pomodoro</h3>
    <hr>
     <div id="animate">
       <img src="../svg/break.svg" v-if="status != 1" style="width:180px;height:180px">
@@ -9,8 +9,14 @@
 
     <h4>{{ currentText }}</h4>
     <div class="timetext">
-      <h2> <img src="../svg/time.svg" style="width:70px;height:70px"> {{ timetext }}</h2>
+      <h2> <img src="../svg/time.svg" style="width:70px;height:70px;filter:drop-shadow(4px 4px 5px black);">{{ timetext }}</h2>
     </div>
+  <b-btn v-if="!sound" variant="link" @click="muted" class="text-danger mt-3">
+      <font-awesome-icon size="lg" :icon="['fas','bell']"></font-awesome-icon>
+    </b-btn>
+    <b-btn v-if="sound" variant="link" @click="Nomuted" class="text-danger mt-3">
+      <font-awesome-icon size="lg" :icon="['fa','bell-slash']"></font-awesome-icon>
+    </b-btn>
 
     <b-btn variant="outline-info" v-if="status != 1" @click="start" class="btn" >
       <font-awesome-icon :icon="['fas', 'play']"></font-awesome-icon>
@@ -145,6 +151,7 @@ export default {
       this.nowdate = ''
       this.time = this.hidetime
     }
+
   }
 }
 </script>

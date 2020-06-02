@@ -17,7 +17,8 @@ export default new Vuex.Store({
     timeleft: timeleft,
     alarm: 'alarm2.mp3',
     current: '',
-    isBreak: false
+    isBreak: false,
+    sound: false
   },
   getters: {
     alarm (state) {
