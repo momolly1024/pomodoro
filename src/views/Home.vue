@@ -15,7 +15,7 @@
       <font-awesome-icon size="lg" :icon="['fas','bell']" style="color:#8E8E8E"></font-awesome-icon>
     </b-btn>
     <b-btn v-if="sound" variant="link" @click="Nomuted" class="text-danger mt-3">
-      <font-awesome-icon size="lg" :icon="['fas','bell-slash']" style="color:#8E8E8E"></font-awesome-icon>
+      <font-awesome-icon size="lg" :icon="['fas','bell-slash']"></font-awesome-icon>
     </b-btn>
 
     <b-btn variant="outline-info" v-if="status != 1" @click="start" class="btn" >
