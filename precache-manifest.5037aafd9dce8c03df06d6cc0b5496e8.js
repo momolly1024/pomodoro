@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "alarms/alarm4.mp3"
   },
   {
-    "revision": "7d8d3fdcaa05cec2a9e9",
+    "revision": "b1cd54804f304bfd55d0",
     "url": "css/app.098de214.css"
   },
   {
@@ -440,20 +440,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/working.57f396a0.svg"
   },
   {
-    "revision": "e7333003e86e7c4cae93b1ba16ef41f7",
+    "revision": "3adc4dada49ff65078d9e185d44e206e",
     "url": "index.html"
   },
   {
-    "revision": "7d8d3fdcaa05cec2a9e9",
-    "url": "js/app.fd065a5e.js"
+    "revision": "b1cd54804f304bfd55d0",
+    "url": "js/app.acb7563e.js"
   },
   {
     "revision": "c3aa709af1decf1f2fc9",
     "url": "js/chunk-vendors.8b5f574a.js"
   },
   {
-    "revision": "c9c70e93eb1091a3b253",
-    "url": "js/historys.36ec01d0.js"
+    "revision": "f072e3ca7ec6d5d4af0f",
+    "url": "js/historys.be2a879c.js"
   },
   {
     "revision": "37e28d512a3e4c53f968",
