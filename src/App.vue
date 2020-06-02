@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="container justify-content-center">
-    <div id="nav" >
+    <div id="nav">
 
       <b-btn-group class="fixed-bottom">
       <router-link to="/"> <b-button class="menubtn"><font-awesome-icon :icon="['fas', 'clock']"></font-awesome-icon>  首頁  </b-button> </router-link>

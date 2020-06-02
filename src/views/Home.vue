@@ -7,6 +7,10 @@
       <img src="../svg/working.svg" v-if="status == 1" style="width:180px;height:180px">
     </div>
 
+      <div class="saysomthing " style="position:absolute;top:8rem;left:0%">
+        <p style="writing-mode: vertical-rl;text-orientation: upright;">加油加油再撐一下，你可以的❤❤❤❤❤❤❤</p>
+      </div>
+
     <h4>{{ currentText }}</h4>
     <div class="timetext">
       <h2> <img src="../svg/time.svg" style="width:70px;height:70px;filter:drop-shadow(4px 4px 5px black);">{{ timetext }}</h2>
@@ -27,6 +31,8 @@
     <b-btn variant="outline-success" v-if="current.length > 0 || todos.length  > 0" @click="finish(true)" class="btn">
       <font-awesome-icon :icon="['fas', 'step-forward']"></font-awesome-icon>
     </b-btn>
+       {{nextTodo ()}}
+    <p >NEXT : {{ next }}</p>
     <div class="time" >
       <button size="sm" id="btn1" @click="timenow" v-if="timeshow==false">顯示時間</button>
       <button size="sm" id="btn2" @click="timehide"  v-if="timeshow==true">隱藏時間</button>
@@ -84,7 +90,11 @@ export default {
     },
     todos () {
       return this.$store.getters.todos
+    },
+    next () {
+      return this.$store.getters.next
     }
+
   },
   methods: {
     start () {
@@ -159,6 +169,9 @@ export default {
     Nomuted () {
       audio.muted = false
       this.sound = false
+    },
+    nextTodo () {
+      this.$store.commit('nextTodo')
     }
 
   }

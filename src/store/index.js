@@ -18,8 +18,9 @@ export default new Vuex.Store({
     timeleft: timeleft,
     alarm: 'alarm2.mp3',
     current: '',
-    isBreak: false
-
+    isBreak: false,
+    saysomething: '',
+    next: ''
   },
   getters: {
     alarm (state) {
@@ -39,7 +40,15 @@ export default new Vuex.Store({
     },
     historys (state) {
       return state.historys
+    },
+    saysomething (state) {
+      return state.saysomething
+    },
+    nextTodo (state) {
+      if (state.todos.length > 0) state.next = state.todos[0].name
+      else state.next = '沒有下一筆'
     }
+
   },
   mutations: {
     selectAlarm (state, data) {
@@ -101,7 +110,12 @@ export default new Vuex.Store({
     },
     delHistory (state, data) {
       state.historys.splice(state.historys.length - data - 1, 1)
+    },
+    nextTodo (state) {
+      if (state.todos.length > 0) state.next = state.todos[0].name
+      else state.next = '沒有下一筆'
     }
+
   },
   actions: {
   },

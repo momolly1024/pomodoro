@@ -10,7 +10,7 @@
             <b-tr >
                 <b-td>{{ history.time }}</b-td>
                 <b-td>{{ history.name }}</b-td>
-                 <b-button pill variant="outline-danger" size="sm" @click="delHistory(index)"><font-awesome-icon :icon="['fas', 'trash-alt']"></font-awesome-icon></b-button>
+                 <b-button  pill variant="outline-danger" size="sm" @click="delHistory(index)"><font-awesome-icon :icon="['fas', 'trash-alt']"></font-awesome-icon></b-button>
 
             </b-tr>
             </b-tbody>
