@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <h3 class="mt-1"> <img src="../svg/tomato.svg" style="width:50px;height:45px; filter:drop-shadow(1px 1px 3px black)"> 番茄鐘 Pomodoro</h3>
+    <h3 class="mt-1"> <button @click="showpomodoro" style="background:none;border:none;color:#4f4f4f"><img src="../svg/tomato.svg" style="width:50px;height:45px; filter:drop-shadow(1px 1px 3px black)"> 番茄鐘 Pomodoro</button></h3>
    <hr>
     <div id="animate">
       <img src="../svg/break.svg" v-if="status != 1" style="width:180px;height:180px">
@@ -8,7 +8,7 @@
     </div>
 
       <div class="saysomthing " style="position:absolute;top:8rem;left:0%">
-        <p style="writing-mode: vertical-rl;text-orientation: upright;">加油加油再撐一下，你可以的❤❤❤❤❤❤❤</p>
+        <p style="writing-mode: vertical-rl;text-orientation: upright;">{{ savesaysomthing }}加油加油再撐一下，你可以的❤❤❤❤❤❤❤</p>
       </div>
 
     <h4>{{ currentText }}</h4>
@@ -19,7 +19,7 @@
       <font-awesome-icon size="lg" :icon="['fas','bell']" style="color:#8E8E8E"></font-awesome-icon>
     </b-btn>
     <b-btn v-if="sound" variant="link" @click="Nomuted" class="text-danger mt-3">
-      <font-awesome-icon size="lg" :icon="['fas','bell-slash']"></font-awesome-icon>
+      <font-awesome-icon size="lg" :icon="['fas','bell-slash']" style="color:#8E8E8E"></font-awesome-icon>
     </b-btn>
 
     <b-btn variant="outline-info" v-if="status != 1" @click="start" class="btn" >
@@ -32,7 +32,7 @@
       <font-awesome-icon :icon="['fas', 'step-forward']"></font-awesome-icon>
     </b-btn>
        {{nextTodo ()}}
-    <p >NEXT : {{ next }}</p>
+    <p>下一件事 : {{ next }}</p>
     <div class="time" >
       <button size="sm" id="btn1" @click="timenow" v-if="timeshow==false">顯示時間</button>
       <button size="sm" id="btn2" @click="timehide"  v-if="timeshow==true">隱藏時間</button>
@@ -93,6 +93,9 @@ export default {
     },
     next () {
       return this.$store.getters.next
+    },
+    saysomething () {
+      return this.$store.getters.saysomething
     }
 
   },
@@ -172,6 +175,14 @@ export default {
     },
     nextTodo () {
       this.$store.commit('nextTodo')
+    },
+    showpomodoro () {
+      Swal.fire({
+        title: '番茄鐘工作法：\n每次專注結束搭配一次休息，多次專注結束搭配一次長休息。\n勞逸結合，有助於提高工作效率。',
+        showConfirmButton: false,
+        timer: 3000
+        // width: 200
+      })
     }
 
   }

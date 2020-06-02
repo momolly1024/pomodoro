@@ -14,14 +14,14 @@
     <b-tab title="個人化">
       <b-table-simple>
       <th>個人化設定</th>
-      <tr>
-      <td>勵志標語：<input type="text" class="sayinput" > <b-button size="sm" style="color:#AD5A5A;background:white" @click="savesaysomthing"> <font-awesome-icon :icon="['fas', 'save']"></font-awesome-icon></b-button></td>
+      <tr >
+      <td > 勵志標語：<input type="text" class="sayinput w-50"> <b-button size="sm" style="color:green;background:white" @click="savesaysomthing"> <font-awesome-icon :icon="['fas', 'save']"></font-awesome-icon></b-button></td>
 
       </tr>
       </b-table-simple>
 
       <b-table-simple>
-      <th>目前想不到</th>
+      <th colspan="2">目前想不到</th>
         <tr>
         <td>456</td>
         <td>456</td>
@@ -81,12 +81,14 @@ export default {
     alarm () {
       return this.$store.getters.alarm
     }
+
   },
   methods: {
     selectAlarm (item) {
       this.$store.commit('selectAlarm', item.file)
     },
     savesaysomthing () {
+      this.$store.commit('saysomthing')
       Swal.fire({
         title: '已儲存 ❤',
         showConfirmButton: false,
