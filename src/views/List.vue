@@ -1,6 +1,7 @@
 <template>
   <div id="list" class="mt-1">
-    <h2>To Do List</h2>
+    <h2>   <img src="../svg/settinglogo.svg" style="width:40px;height:40px;text-align:center">
+   To Do List</h2>
     <div class="input">
       <b-form-input v-model="newtodo" @keydown.enter="addTodo" placeholder="Add a new mission!" maxlength="20"></b-form-input>
       <b-btn variant="success" @click="addTodo" class="d-inline-block">新增</b-btn>

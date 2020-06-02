@@ -1,13 +1,21 @@
 <template>
-  <div id="settings">
-    <b-table :items="items" :fields="fields" @row-clicked="selectAlarm" hover >
+  <div id="settings" class="mt-3">
+
+<div>
+  <b-tabs content-class="mt-3">
+    <b-tab title="鈴聲" active>    <b-table :items="items" :fields="fields" @row-clicked="selectAlarm" hover >
       <template v-slot:cell(preview)="data">
         <audio controls :src="'./alarms/'+data.item.file"></audio>
       </template>
       <template v-slot:cell(select)="data">
         <font-awesome-icon v-if="data.item.file == alarm" :icon="['fas', 'check']"></font-awesome-icon>
       </template>
-    </b-table>
+    </b-table></b-tab>
+    <b-tab title="開發中"><p>coming soon...</p></b-tab>
+    <b-tab title="其他" ><p>coming soon...</p></b-tab>
+  </b-tabs>
+</div>
+
   </div>
 </template>
 <script>

@@ -3,7 +3,8 @@
             <b-table-simple  hover class="mt-1 w-75 mx-auto">
             <b-thead>
                 <b-tr>
-                <b-th style="font-size: 1.5rem;">歷史紀錄</b-th>
+                <b-th style="font-size: 1.5rem;"><img src="../svg/historylogo.svg" style="width:40px;height:40px;text-align:center">
+   歷史紀錄<img src="../svg/historylogo.svg" style="width:40px;height:40px;text-align:center"></b-th>
                 </b-tr>
             </b-thead>
             <b-tbody v-for = "(history, index) in historys" :key="index">

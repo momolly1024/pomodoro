@@ -1,6 +1,7 @@
 <template>
   <div id="home">
-    <h4 class="mt-1"> <img src="../svg/tomato.svg" style="width:40px;height:40px"> 番茄鐘 Pomodoro</h4>
+    <h3 class="mt-1"> <img src="../svg/tomato.svg" style="width:50px;height:45px"> 番茄鐘 Pomodoro</h3>
+   <hr>
     <div id="animate">
       <img src="../svg/break.svg" v-if="status != 1" style="width:180px;height:180px">
       <img src="../svg/working.svg" v-if="status == 1" style="width:180px;height:180px">

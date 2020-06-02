@@ -14,7 +14,7 @@ export default new Vuex.Store({
   state: {
     todos: [],
     historys: [],
-    timeleft,
+    timeleft: timeleft,
     alarm: 'alarm2.mp3',
     current: '',
     isBreak: false
