@@ -12,10 +12,10 @@
       <h2> <img src="../svg/time.svg" style="width:70px;height:70px;filter:drop-shadow(4px 4px 5px black);">{{ timetext }}</h2>
     </div>
   <b-btn v-if="!sound" variant="link" @click="muted" class="text-danger mt-3">
-      <font-awesome-icon size="lg" :icon="['fas','bell']"></font-awesome-icon>
+      <font-awesome-icon size="lg" :icon="['fas','bell']" style="color:#8E8E8E"></font-awesome-icon>
     </b-btn>
     <b-btn v-if="sound" variant="link" @click="Nomuted" class="text-danger mt-3">
-      <font-awesome-icon size="lg" :icon="['fa','bell-slash']"></font-awesome-icon>
+      <font-awesome-icon size="lg" :icon="['fas','bell-slash']" style="color:#8E8E8E"></font-awesome-icon>
     </b-btn>
 
     <b-btn variant="outline-info" v-if="status != 1" @click="start" class="btn" >
@@ -24,7 +24,7 @@
     <b-btn variant="outline-danger" v-if="status == 1" @click="pause" class="btn">
       <font-awesome-icon :icon="['fas', 'pause']"></font-awesome-icon>
     </b-btn>
-    <b-btn variant="outline-warning" v-if="current.length > 0 || todos.length  > 0" @click="finish(true)" class="btn">
+    <b-btn variant="outline-success" v-if="current.length > 0 || todos.length  > 0" @click="finish(true)" class="btn">
       <font-awesome-icon :icon="['fas', 'step-forward']"></font-awesome-icon>
     </b-btn>
     <div class="time" >
@@ -39,7 +39,7 @@
 
 <script>
 import Swal from 'sweetalert2'
-
+const audio = new Audio()
 export default {
   data () {
     return {
@@ -51,7 +51,8 @@ export default {
       nowdate: '',
       time: '',
       timeshow: false,
-      hidetime: ''
+      hidetime: '',
+      sound: false
     }
   },
   computed: {
@@ -150,6 +151,14 @@ export default {
       this.timeshow = false
       this.nowdate = ''
       this.time = this.hidetime
+    },
+    muted () {
+      audio.muted = true
+      this.sound = true
+    },
+    Nomuted () {
+      audio.muted = false
+      this.sound = false
     }
 
   }

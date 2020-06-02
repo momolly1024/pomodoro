@@ -14,11 +14,12 @@ export default new Vuex.Store({
   state: {
     todos: [],
     historys: [],
+    rehistorys: [],
     timeleft: timeleft,
     alarm: 'alarm2.mp3',
     current: '',
-    isBreak: false,
-    sound: false
+    isBreak: false
+
   },
   getters: {
     alarm (state) {
@@ -97,6 +98,9 @@ export default new Vuex.Store({
       }
       state.current = ''
       state.timeleft = state.isBreak ? timeleftBreak : timeleft
+    },
+    delHistory (state, data) {
+      state.historys.splice(state.historys.length - data - 1, 1)
     }
   },
   actions: {
