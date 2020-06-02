@@ -32,7 +32,7 @@
       <font-awesome-icon :icon="['fas', 'step-forward']"></font-awesome-icon>
     </b-btn>
        {{nextTodo ()}}
-    <p>下一件事 : {{ next }}</p>
+    <p>接下來 : {{ next }}</p>
     <div class="time" >
       <button size="sm" id="btn1" @click="timenow" v-if="timeshow==false">顯示時間</button>
       <button size="sm" id="btn2" @click="timehide"  v-if="timeshow==true">隱藏時間</button>
@@ -130,9 +130,12 @@ export default {
       this.$store.commit('finish')
 
       if (!skip) {
-        const audio = new Audio()
+        // const audio = new Audio()
         audio.src = './alarms/' + this.alarm
         audio.play()
+        setTimeout(() => {
+          audio.pause()
+        }, this.alarmSec * 1000)
       }
 
       if (this.todos.length > 0) {
