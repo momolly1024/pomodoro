@@ -10,7 +10,8 @@
       <div class="saysomthing " style="position:absolute;top:8rem;left:0%">
         <p style="writing-mode: vertical-rl;text-orientation: upright;">
         {{saysomething}}
-        {{Newthing}}</p>
+        <!-- {{Newthing}} -->
+        </p>
       </div>
 
     <h4>{{ currentText }}</h4>

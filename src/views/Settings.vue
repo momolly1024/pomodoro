@@ -15,7 +15,7 @@
       <b-table-simple>
       <th>個人化設定</th>
       <tr >
-      <td > 勵志標語：<b-form-input type="text" class="sayinput w-50" v-model="Newthing"></b-form-input> <b-button size="sm" style="color:green;background:white" @click="savesaysomthing"> <font-awesome-icon :icon="['fas', 'save']"></font-awesome-icon></b-button></td>
+      <td > 勵志標語：<b-form-input type="text" class="sayinput w-50 align-middle" v-model="Newthing"  maxlength="20"></b-form-input> <b-button size="sm" style="color:green;background:white" @click="savesaysomthing(Newthing)"> <font-awesome-icon :icon="['fas', 'save']"></font-awesome-icon></b-button></td>
 
       </tr>
       </b-table-simple>
