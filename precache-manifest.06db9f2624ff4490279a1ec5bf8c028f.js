@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "alarms/alarm4.mp3"
   },
   {
-    "revision": "72bf0434100f4840bafc",
+    "revision": "e2750ea00c8e62a200d0",
     "url": "css/app.aa671603.css"
   },
   {
@@ -440,12 +440,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "img/working.57f396a0.svg"
   },
   {
-    "revision": "52eca7e54e58cf9444b492978e532a2a",
+    "revision": "b0a79fad2a6582a6b36be25d31d92e00",
     "url": "index.html"
   },
   {
-    "revision": "72bf0434100f4840bafc",
-    "url": "js/app.26ccac59.js"
+    "revision": "e2750ea00c8e62a200d0",
+    "url": "js/app.de72a49f.js"
   },
   {
     "revision": "c3aa709af1decf1f2fc9",
@@ -464,8 +464,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "js/notfound.5894703e.js"
   },
   {
-    "revision": "28c0ff52b87ae1bd68a9",
-    "url": "js/settings.97dd2961.js"
+    "revision": "ae4e6ef7acb1ecf7c7dc",
+    "url": "js/settings.175bca89.js"
   },
   {
     "revision": "97012d524ae0b7e07799ed3664171347",
