@@ -20,7 +20,7 @@ export default new Vuex.Store({
     current: '',
     isBreak: false,
     next: '',
-    saysomething: ''
+    saysomething: '加油加油再撐一下，你可以的❤❤❤❤❤❤❤'
   },
   getters: {
     alarm (state) {
@@ -47,6 +47,9 @@ export default new Vuex.Store({
     },
     next (state) {
       return state.next
+    },
+    saysomething (state) {
+      return state.saysomething
     }
 
   },
@@ -114,6 +117,9 @@ export default new Vuex.Store({
     nextTodo (state) {
       if (state.todos.length > 0) state.next = state.todos[0].name
       else state.next = '沒有下一筆'
+    },
+    savesaysomthing (state, data) {
+      state.saysomething = data
     }
 
   },

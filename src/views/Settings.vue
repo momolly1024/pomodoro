@@ -15,7 +15,7 @@
       <b-table-simple>
       <th>個人化設定</th>
       <tr >
-      <td > 勵志標語：<input type="text" class="sayinput w-50" v-model="saysomthing"> <b-button size="sm" style="color:green;background:white" @click="savesaysomthing"> <font-awesome-icon :icon="['fas', 'save']"></font-awesome-icon></b-button></td>
+      <td > 勵志標語：<b-form-input type="text" class="sayinput w-50" v-model="Newthing"></b-form-input> <b-button size="sm" style="color:green;background:white" @click="savesaysomthing"> <font-awesome-icon :icon="['fas', 'save']"></font-awesome-icon></b-button></td>
 
       </tr>
       </b-table-simple>
@@ -87,9 +87,10 @@ export default {
     selectAlarm (item) {
       this.$store.commit('selectAlarm', item.file)
     },
-    savesaysomthing () {
-      this.$store.commit('saysomthing')
-      Swal.fire({
+    savesaysomthing (Newthing) {
+      if (this.Newthing !== '' && this.saysomething !== this.Newthing) {
+        this.$store.commit('savesaysomthing', this.Newthing)
+      }Swal.fire({
         title: '已儲存 ❤',
         showConfirmButton: false,
         timer: 800,

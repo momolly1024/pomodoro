@@ -8,7 +8,9 @@
     </div>
 
       <div class="saysomthing " style="position:absolute;top:8rem;left:0%">
-        <p style="writing-mode: vertical-rl;text-orientation: upright;">{{ savesaysomthing }}加油加油再撐一下，你可以的❤❤❤❤❤❤❤</p>
+        <p style="writing-mode: vertical-rl;text-orientation: upright;">
+        {{saysomething}}
+        {{Newthing}}</p>
       </div>
 
     <h4>{{ currentText }}</h4>
