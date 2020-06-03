@@ -45,6 +45,8 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2'
+
 export default {
   data () {
     return {
@@ -56,8 +58,12 @@ export default {
   },
   methods: {
     addTodo () {
-      this.$store.commit('addTodo', this.newtodo)
-      this.newtodo = ''
+      if (this.newtodo.trim().length > 0) {
+        this.$store.commit('addTodo', this.newtodo)
+        this.newtodo = ''
+      } else {
+        Swal.fire('請輸入待辦事項')
+      }
     },
     delTodo (index) {
       this.$store.commit('delTodo', index)
